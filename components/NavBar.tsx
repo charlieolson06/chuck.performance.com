@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const LINKS = [
-  { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
@@ -9,14 +8,22 @@ const LINKS = [
 
 export function NavBar() {
   return (
-    <header className="border-b border-black/[.08] dark:border-white/[.145]">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-semibold">
+    <header className="border-b border-line">
+      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-display text-2xl tracking-wide text-foreground"
+        >
+          <span className="inline-block h-2 w-2 bg-accent" aria-hidden />
           ChuckPerformance
         </Link>
-        <div className="flex gap-5 text-sm">
-          {LINKS.slice(1).map((link) => (
-            <Link key={link.href} href={link.href} className="hover:underline">
+        <div className="flex gap-6 font-mono text-xs uppercase tracking-widest text-muted">
+          {LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition-colors hover:text-accent"
+            >
               {link.label}
             </Link>
           ))}

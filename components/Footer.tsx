@@ -1,8 +1,9 @@
 export function Footer() {
   return (
-    <footer className="border-t border-black/[.08] dark:border-white/[.145]">
-      <div className="mx-auto max-w-3xl px-6 py-6 text-sm text-zinc-500">
-        © {new Date().getFullYear()} ChuckPerformance
+    <footer className="border-t border-line">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6 font-mono text-xs uppercase tracking-widest text-muted">
+        <span>© {new Date().getFullYear()} ChuckPerformance</span>
+        <span className="text-accent">●</span>
       </div>
     </footer>
   );

@@ -5,29 +5,41 @@ export default function Home() {
   const latestPost = getAllPosts()[0];
 
   return (
-    <div className="flex flex-col gap-10">
-      <section>
-        <h1 className="text-3xl font-semibold tracking-tight">Chuck Olson</h1>
-        <p className="mt-3 max-w-xl text-zinc-600 dark:text-zinc-400">
-          We must always reevaluate what we do, lest habits and past wisdom
-          blind us to new possibilities.
+    <div className="flex flex-col gap-16">
+      <section className="relative">
+        <span
+          className="pointer-events-none absolute -top-10 -left-2 select-none font-display text-[10rem] leading-none text-foreground/[.04] sm:text-[14rem]"
+          aria-hidden
+        >
+          01
+        </span>
+        <h1 className="rise-in relative font-display text-6xl leading-none tracking-wide text-foreground sm:text-8xl">
+          Chuck Olson
+        </h1>
+        <p
+          className="rise-in relative mt-6 max-w-lg border-l-2 border-accent pl-4 font-mono text-sm leading-relaxed text-muted"
+          style={{ animationDelay: "0.1s" }}
+        >
+          &ldquo;We must always reevaluate what we do, lest habits and past
+          wisdom blind us to new possibilities.&rdquo;
         </p>
       </section>
 
       {latestPost && (
-        <section>
-          <h2 className="text-sm font-medium uppercase tracking-wide text-zinc-500">
-            Latest post
+        <section
+          className="rise-in border border-line bg-surface p-6"
+          style={{ animationDelay: "0.2s" }}
+        >
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+            Latest Post
           </h2>
           <Link
             href={`/blog/${latestPost.slug}`}
-            className="mt-2 block text-lg font-medium hover:underline"
+            className="mt-3 block font-display text-3xl tracking-wide text-foreground transition-colors hover:text-accent"
           >
             {latestPost.title}
           </Link>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            {latestPost.summary}
-          </p>
+          <p className="mt-2 text-muted">{latestPost.summary}</p>
         </section>
       )}
     </div>

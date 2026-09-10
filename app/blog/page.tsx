@@ -11,17 +11,23 @@ export default function BlogIndexPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-semibold tracking-tight">Blog</h1>
-      <div className="mt-8 flex flex-col gap-8">
+      <h1 className="font-display text-5xl tracking-wide text-foreground">
+        Blog
+      </h1>
+      <div className="mt-10 flex flex-col">
         {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-            <h2 className="font-medium group-hover:underline">{post.title}</h2>
-            <p className="text-sm text-zinc-500">
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className="group border-b border-line py-6 first:border-t"
+          >
+            <p className="font-mono text-xs uppercase tracking-widest text-muted">
               {post.date} · {post.readingTime}
             </p>
-            <p className="mt-1 text-zinc-600 dark:text-zinc-400">
-              {post.summary}
-            </p>
+            <h2 className="mt-2 font-display text-3xl tracking-wide text-foreground transition-colors group-hover:text-accent">
+              {post.title}
+            </h2>
+            <p className="mt-1 text-muted">{post.summary}</p>
           </Link>
         ))}
       </div>

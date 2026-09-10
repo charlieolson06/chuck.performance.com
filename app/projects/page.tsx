@@ -8,35 +8,43 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <h1 className="text-2xl font-semibold tracking-tight">Projects</h1>
-      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+      <h1 className="font-display text-5xl tracking-wide text-foreground">
+        Projects
+      </h1>
+      <div className="mt-10 grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="rounded-lg border border-black/[.08] p-5 dark:border-white/[.145]"
+            className="group border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-accent"
           >
-            <h2 className="font-medium">{project.title}</h2>
-            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-              {project.description}
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <h2 className="font-display text-2xl tracking-wide text-foreground">
+              {project.title}
+            </h2>
+            <p className="mt-2 text-sm text-muted">{project.description}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-black/[.05] px-2 py-0.5 text-xs dark:bg-white/[.08]"
+                  className="border border-line px-2 py-0.5 font-mono text-xs uppercase tracking-wide text-muted"
                 >
                   {tech}
                 </span>
               ))}
             </div>
-            <div className="mt-4 flex gap-4 text-sm">
+            <div className="mt-5 flex gap-5 font-mono text-xs uppercase tracking-widest">
               {project.link && (
-                <a href={project.link} className="hover:underline">
-                  Live
+                <a
+                  href={project.link}
+                  className="text-accent transition-opacity hover:opacity-70"
+                >
+                  Live ↗
                 </a>
               )}
               {project.repo && (
-                <a href={project.repo} className="hover:underline">
+                <a
+                  href={project.repo}
+                  className="text-muted transition-colors hover:text-accent"
+                >
                   Code
                 </a>
               )}
