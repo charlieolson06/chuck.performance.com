@@ -7,12 +7,6 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16">
       <section className="relative">
-        <span
-          className="pointer-events-none absolute -top-10 -left-2 select-none font-display text-[10rem] leading-none text-foreground/[.04] sm:text-[14rem]"
-          aria-hidden
-        >
-          01
-        </span>
         <h1 className="rise-in relative font-display text-6xl leading-none tracking-wide text-foreground sm:text-8xl">
           Chuck Olson
         </h1>
