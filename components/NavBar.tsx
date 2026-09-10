@@ -12,7 +12,7 @@ export function NavBar() {
     <header className="border-b border-black/[.08] dark:border-white/[.145]">
       <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-semibold">
-          Your Name
+          ChuckPerformance
         </Link>
         <div className="flex gap-5 text-sm">
           {LINKS.slice(1).map((link) => (

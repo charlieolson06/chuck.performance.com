@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-10">
       <section>
-        <h1 className="text-3xl font-semibold tracking-tight">Your Name</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Chuck Olson</h1>
         <p className="mt-3 max-w-xl text-zinc-600 dark:text-zinc-400">
-          Short intro about who you are and what you work on. Replace this
-          with a couple of sentences that give visitors context.
+          We must always reevaluate what we do, lest habits and past wisdom
+          blind us to new possibilities.
         </p>
       </section>
 
