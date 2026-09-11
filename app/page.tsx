@@ -7,11 +7,6 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16">
       <section>
-        <p
-          className="rise-in font-display text-xl italic tracking-tight text-muted"
-        >
-          Welcome, I&apos;m
-        </p>
         <h1 className="rise-in font-display text-6xl leading-[1.05] tracking-tight text-foreground sm:text-7xl">
           Chuck Olson
         </h1>
