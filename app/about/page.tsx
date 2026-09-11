@@ -7,13 +7,16 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <article>
-      <h1 className="font-display text-5xl tracking-tight text-foreground">
+      <h1 className="rise-in font-display text-5xl tracking-tight text-foreground">
         About
       </h1>
 
       <div className="mt-10 border-t border-line" />
 
-      <p className="mt-10 max-w-xl font-display text-xl italic leading-relaxed text-muted">
+      <p
+        className="rise-in mt-10 max-w-xl font-display text-xl italic leading-relaxed text-muted"
+        style={{ animationDelay: "0.1s" }}
+      >
         Write a couple of paragraphs here: background, what you work on now,
         and what you&apos;re interested in. This is a static page — edit this
         file directly whenever it needs to change.

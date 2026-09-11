@@ -11,18 +11,19 @@ export default function BlogIndexPage() {
 
   return (
     <div>
-      <h1 className="font-display text-5xl tracking-tight text-foreground">
+      <h1 className="rise-in font-display text-5xl tracking-tight text-foreground">
         Blog
       </h1>
 
       <div className="mt-10 border-t border-line" />
 
       <div className="flex flex-col">
-        {posts.map((post) => (
+        {posts.map((post, i) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group border-b border-line py-6"
+            className="rise-in group border-b border-line py-6"
+            style={{ animationDelay: `${0.1 + i * 0.08}s` }}
           >
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
               {post.date} · {post.readingTime}

@@ -37,11 +37,20 @@ export default async function BlogPostPage({
 
   return (
     <article className="prose max-w-2xl">
-      <p className="font-mono text-xs uppercase tracking-widest text-muted not-prose">
+      <p
+        className="rise-in font-mono text-xs uppercase tracking-widest text-muted not-prose"
+      >
         {post.date} · {post.readingTime}
       </p>
-      <h1 className="!font-display !text-5xl !tracking-tight">{post.title}</h1>
-      <MDXRemote source={post.content} />
+      <h1
+        className="rise-in !font-display !text-5xl !tracking-tight"
+        style={{ animationDelay: "0.1s" }}
+      >
+        {post.title}
+      </h1>
+      <div className="rise-in" style={{ animationDelay: "0.2s" }}>
+        <MDXRemote source={post.content} />
+      </div>
     </article>
   );
 }

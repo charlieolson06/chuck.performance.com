@@ -8,17 +8,18 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <h1 className="font-display text-5xl tracking-tight text-foreground">
+      <h1 className="rise-in font-display text-5xl tracking-tight text-foreground">
         Projects
       </h1>
 
       <div className="mt-10 border-t border-line" />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
+        {projects.map((project, i) => (
           <div
             key={project.title}
-            className="group rounded-2xl bg-block p-6 text-block-foreground transition-transform hover:-translate-y-0.5"
+            className="rise-in group rounded-2xl bg-block p-6 text-block-foreground transition-transform hover:-translate-y-0.5"
+            style={{ animationDelay: `${0.1 + i * 0.08}s` }}
           >
             <h2 className="font-display text-2xl tracking-tight text-block-foreground">
               {project.title}
