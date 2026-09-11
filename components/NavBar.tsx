@@ -9,7 +9,7 @@ const LINKS = [
 export function NavBar() {
   return (
     <header className="border-b border-line">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6 sm:px-10">
         <Link
           href="/"
           className="font-display text-2xl italic tracking-tight text-foreground"

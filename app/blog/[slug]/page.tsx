@@ -36,7 +36,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   return (
-    <article className="prose max-w-none">
+    <article className="prose max-w-2xl">
       <p className="font-mono text-xs uppercase tracking-widest text-muted not-prose">
         {post.date} · {post.readingTime}
       </p>
