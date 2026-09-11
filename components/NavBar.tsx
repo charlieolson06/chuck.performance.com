@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const LINKS = [
   { href: "/projects", label: "Projects" },
@@ -16,7 +17,7 @@ export function NavBar() {
         >
           ChuckPerformance
         </Link>
-        <div className="flex gap-6 font-mono text-xs uppercase tracking-widest text-muted">
+        <div className="flex items-center gap-6 font-mono text-xs uppercase tracking-widest text-muted">
           {LINKS.map((link) => (
             <Link
               key={link.href}
@@ -26,6 +27,7 @@ export function NavBar() {
               {link.label}
             </Link>
           ))}
+          <SocialLinks variant="plain" />
         </div>
       </nav>
     </header>

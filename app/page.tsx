@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-import { SocialLinks } from "@/components/SocialLinks";
 
 export default function Home() {
   const latestPost = getAllPosts()[0];
@@ -42,15 +41,6 @@ export default function Home() {
           <p className="mt-2 text-muted">{latestPost.summary}</p>
         </section>
       )}
-
-      <section className="rise-in" style={{ animationDelay: "0.3s" }}>
-        <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
-          Connect
-        </h2>
-        <div className="mt-4">
-          <SocialLinks />
-        </div>
-      </section>
     </div>
   );
 }

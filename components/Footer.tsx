@@ -1,9 +1,10 @@
+import { SocialLinks } from "@/components/SocialLinks";
+
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="flex items-center justify-between px-6 py-6 font-mono text-xs uppercase tracking-widest text-muted sm:px-12 lg:px-20">
-        <span>© {new Date().getFullYear()} ChuckPerformance</span>
-        <span className="text-accent">●</span>
+      <div className="flex items-center gap-4 px-6 py-6 sm:px-12 lg:px-20">
+        <SocialLinks variant="button" />
       </div>
     </footer>
   );

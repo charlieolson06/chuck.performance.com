@@ -46,9 +46,13 @@ function openSocial(appUrl: string, webUrl: string) {
   }, 1000);
 }
 
-export function SocialLinks() {
+export function SocialLinks({
+  variant = "button",
+}: {
+  variant?: "button" | "plain";
+}) {
   return (
-    <div className="flex gap-4">
+    <div className={variant === "button" ? "flex gap-4" : "flex gap-5"}>
       {SOCIALS.map((social) => (
         <a
           key={social.name}
@@ -58,9 +62,17 @@ export function SocialLinks() {
             e.preventDefault();
             openSocial(social.appUrl, social.webUrl);
           }}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+          className={
+            variant === "button"
+              ? "flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
+              : "text-muted transition-colors hover:text-accent"
+          }
         >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={variant === "button" ? "h-5 w-5" : "h-4 w-4"}
+          >
             {social.icon}
           </svg>
         </a>
