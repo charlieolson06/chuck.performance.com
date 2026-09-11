@@ -36,11 +36,11 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="prose max-w-none">
       <p className="font-mono text-xs uppercase tracking-widest text-muted not-prose">
         {post.date} · {post.readingTime}
       </p>
-      <h1 className="!font-display !text-5xl !tracking-wide">{post.title}</h1>
+      <h1 className="!font-display !text-5xl !tracking-tight">{post.title}</h1>
       <MDXRemote source={post.content} />
     </article>
   );

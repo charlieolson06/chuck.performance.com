@@ -2,12 +2,12 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #0a0b0d;
-  --surface: #131519;
-  --foreground: #f2efe9;
-  --muted: #9a9fa8;
-  --accent: #ff4d1f;
-  --line: rgba(242, 239, 233, 0.08);
+  --background: #f2ede4;
+  --surface: #ffffff;
+  --foreground: #211d18;
+  --muted: #756e63;
+  --accent: #b8502f;
+  --line: rgba(33, 29, 24, 0.12);
 }
 
 @theme inline {
@@ -23,29 +23,16 @@
 }
 
 body {
-  background:
-    repeating-linear-gradient(
-      0deg,
-      var(--line) 0,
-      var(--line) 1px,
-      transparent 1px,
-      transparent 96px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      var(--line) 0,
-      var(--line) 1px,
-      transparent 1px,
-      transparent 96px
-    ),
-    var(--background);
+  background-color: var(--background);
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--background);
+  color: var(--surface);
 }
 
 @keyframes rise-in {
@@ -60,7 +47,15 @@ body {
 }
 
 .rise-in {
-  animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.pill {
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .prose {

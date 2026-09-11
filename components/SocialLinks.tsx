@@ -58,7 +58,7 @@ export function SocialLinks() {
             e.preventDefault();
             openSocial(social.appUrl, social.webUrl);
           }}
-          className="flex h-10 w-10 items-center justify-center border border-line text-muted transition-colors hover:border-accent hover:text-accent"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
             {social.icon}

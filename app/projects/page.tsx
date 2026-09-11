@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <h1 className="font-display text-5xl tracking-wide text-foreground">
+      <h1 className="font-display text-5xl tracking-tight text-foreground">
         Projects
       </h1>
       <div className="mt-10 grid gap-5 sm:grid-cols-2">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="group border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-accent"
+            className="group rounded-2xl border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-accent"
           >
-            <h2 className="font-display text-2xl tracking-wide text-foreground">
+            <h2 className="font-display text-2xl tracking-tight text-foreground">
               {project.title}
             </h2>
             <p className="mt-2 text-sm text-muted">{project.description}</p>
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="border border-line px-2 py-0.5 font-mono text-xs uppercase tracking-wide text-muted"
+                  className="rounded-full border border-line px-2.5 py-0.5 font-mono text-xs uppercase tracking-wide text-muted"
                 >
                   {tech}
                 </span>

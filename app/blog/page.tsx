@@ -11,7 +11,7 @@ export default function BlogIndexPage() {
 
   return (
     <div>
-      <h1 className="font-display text-5xl tracking-wide text-foreground">
+      <h1 className="font-display text-5xl tracking-tight text-foreground">
         Blog
       </h1>
       <div className="mt-10 flex flex-col">
@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
               {post.date} · {post.readingTime}
             </p>
-            <h2 className="mt-2 font-display text-3xl tracking-wide text-foreground transition-colors group-hover:text-accent">
+            <h2 className="mt-2 font-display text-3xl tracking-tight text-foreground transition-colors group-hover:text-accent">
               {post.title}
             </h2>
             <p className="mt-1 text-muted">{post.summary}</p>

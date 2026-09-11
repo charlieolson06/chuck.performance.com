@@ -9,12 +9,11 @@ const LINKS = [
 export function NavBar() {
   return (
     <header className="border-b border-line">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
         <Link
           href="/"
-          className="flex items-center gap-2 font-display text-2xl tracking-wide text-foreground"
+          className="font-display text-2xl italic tracking-tight text-foreground"
         >
-          <span className="inline-block h-2 w-2 bg-accent" aria-hidden />
           ChuckPerformance
         </Link>
         <div className="flex gap-6 font-mono text-xs uppercase tracking-widest text-muted">
@@ -22,7 +21,7 @@ export function NavBar() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-accent"
+              className="underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
             >
               {link.label}
             </Link>
