@@ -10,14 +10,14 @@ const LINKS = [
 export function NavBar() {
   return (
     <header className="border-b border-line">
-      <nav className="flex items-center justify-between px-6 py-6 sm:px-12 lg:px-20">
+      <nav className="flex flex-wrap items-center justify-between gap-y-3 px-6 py-6 sm:px-12 lg:px-20">
         <Link
           href="/"
-          className="font-display text-2xl italic tracking-tight text-foreground"
+          className="font-display text-xl italic tracking-tight text-foreground sm:text-2xl"
         >
           ChuckPerformance
         </Link>
-        <div className="flex items-center gap-6 font-mono text-xs uppercase tracking-widest text-muted">
+        <div className="flex items-center gap-4 font-mono text-xs uppercase tracking-widest text-muted sm:gap-6">
           {LINKS.map((link) => (
             <Link
               key={link.href}

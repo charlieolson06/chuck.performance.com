@@ -52,7 +52,7 @@ export function SocialLinks({
   variant?: "button" | "plain";
 }) {
   return (
-    <div className={variant === "button" ? "flex gap-4" : "flex gap-5"}>
+    <div className={variant === "button" ? "flex gap-4" : "flex gap-3"}>
       {SOCIALS.map((social) => (
         <a
           key={social.name}
@@ -65,7 +65,7 @@ export function SocialLinks({
           className={
             variant === "button"
               ? "flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-muted transition-colors hover:border-accent hover:text-accent"
-              : "text-muted transition-colors hover:text-accent"
+              : "flex h-8 w-8 items-center justify-center text-muted transition-colors hover:text-accent"
           }
         >
           <svg
