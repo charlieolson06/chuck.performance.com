@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       <h1 className="font-display text-5xl tracking-tight text-foreground">
         Projects
       </h1>
-      <div className="mt-10 grid gap-5 sm:grid-cols-2">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <div
             key={project.title}
