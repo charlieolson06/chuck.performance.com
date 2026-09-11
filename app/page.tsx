@@ -19,21 +19,23 @@ export default function Home() {
         </p>
       </section>
 
+      <div className="border-t border-line" />
+
       {latestPost && (
         <section
-          className="rise-in rounded-2xl border border-line bg-surface p-8"
+          className="rise-in rounded-2xl bg-block p-8 text-block-foreground"
           style={{ animationDelay: "0.2s" }}
         >
-          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
             Latest Post
           </h2>
           <Link
             href={`/blog/${latestPost.slug}`}
-            className="mt-3 block font-display text-3xl tracking-tight text-foreground transition-colors hover:text-accent"
+            className="mt-3 block font-display text-3xl tracking-tight text-block-foreground transition-colors hover:text-accent"
           >
             {latestPost.title}
           </Link>
-          <p className="mt-2 text-muted">{latestPost.summary}</p>
+          <p className="mt-2 text-block-muted">{latestPost.summary}</p>
         </section>
       )}
     </div>

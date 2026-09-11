@@ -8,6 +8,9 @@
   --muted: #756e63;
   --accent: #b8502f;
   --line: rgba(33, 29, 24, 0.12);
+  --block: #4a3c2e;
+  --block-foreground: #f2ede4;
+  --block-muted: #bfb2a0;
 }
 
 @theme inline {
@@ -17,6 +20,9 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-line: var(--line);
+  --color-block: var(--block);
+  --color-block-foreground: var(--block-foreground);
+  --color-block-muted: var(--block-muted);
   --font-display: var(--font-display);
   --font-sans: var(--font-body);
   --font-mono: var(--font-mono);
