@@ -14,12 +14,15 @@ export default function BlogIndexPage() {
       <h1 className="font-display text-5xl tracking-tight text-foreground">
         Blog
       </h1>
-      <div className="mt-10 flex flex-col">
+
+      <div className="mt-10 border-t border-line" />
+
+      <div className="flex flex-col">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group border-b border-line py-6 first:border-t"
+            className="group border-b border-line py-6"
           >
             <p className="font-mono text-xs uppercase tracking-widest text-muted">
               {post.date} · {post.readingTime}

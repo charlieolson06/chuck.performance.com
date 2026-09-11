@@ -11,21 +11,26 @@ export default function ProjectsPage() {
       <h1 className="font-display text-5xl tracking-tight text-foreground">
         Projects
       </h1>
+
+      <div className="mt-10 border-t border-line" />
+
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <div
             key={project.title}
-            className="group rounded-2xl border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-accent"
+            className="group rounded-2xl bg-block p-6 text-block-foreground transition-transform hover:-translate-y-0.5"
           >
-            <h2 className="font-display text-2xl tracking-tight text-foreground">
+            <h2 className="font-display text-2xl tracking-tight text-block-foreground">
               {project.title}
             </h2>
-            <p className="mt-2 text-sm text-muted">{project.description}</p>
+            <p className="mt-2 text-sm text-block-muted">
+              {project.description}
+            </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full border border-line px-2.5 py-0.5 font-mono text-xs uppercase tracking-wide text-muted"
+                  className="rounded-full border border-block-muted/30 px-2.5 py-0.5 font-mono text-xs uppercase tracking-wide text-block-muted"
                 >
                   {tech}
                 </span>
@@ -43,7 +48,7 @@ export default function ProjectsPage() {
               {project.repo && (
                 <a
                   href={project.repo}
-                  className="text-muted transition-colors hover:text-accent"
+                  className="text-block-muted transition-colors hover:text-accent"
                 >
                   Code
                 </a>
