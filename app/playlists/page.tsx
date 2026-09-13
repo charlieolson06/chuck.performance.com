@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Playlists",
 };
 
-export default function ProjectsPage() {
+export default function PlaylistsPage() {
   return (
     <div>
       <h1 className="rise-in font-display text-5xl tracking-tight text-foreground">
-        Projects
+        Playlists
       </h1>
 
       <div className="mt-10 border-t border-line" />

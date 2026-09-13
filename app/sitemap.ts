@@ -4,7 +4,7 @@ import { getAllSlugs } from "@/lib/posts";
 const SITE_URL = "https://example.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/about", "/projects", "/blog"].map((route) => ({
+  const staticRoutes = ["", "/about", "/playlists", "/blog"].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date(),
   }));

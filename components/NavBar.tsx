@@ -2,9 +2,9 @@ import Link from "next/link";
 import { SocialLinks } from "@/components/SocialLinks";
 
 const LINKS = [
-  { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
+  { href: "/playlists", label: "Playlists" },
 ];
 
 export function NavBar() {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
-import { projects } from "@/lib/projects";
+import { projects as playlists } from "@/lib/projects";
 
 const buttonStyles =
   "pill inline-flex w-fit items-center gap-2 border border-accent px-5 py-2 text-accent transition-colors hover:bg-accent hover:text-background";
@@ -25,34 +25,10 @@ export default function Home() {
 
       <div className="border-t border-line" />
 
-      <section
-        className="rise-in flex flex-col gap-4 rounded-2xl bg-block p-8 text-block-foreground"
-        style={{ animationDelay: "0.2s" }}
-      >
-        <div>
-          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
-            Projects
-          </h2>
-          <p className="mt-3 font-display text-3xl tracking-tight text-block-foreground">
-            {projects.length} {projects.length === 1 ? "project" : "projects"}{" "}
-            and counting
-          </p>
-          <p className="mt-2 max-w-md text-block-muted">
-            A running list of things I&apos;ve built, from training tools to
-            personal experiments.
-          </p>
-        </div>
-        <Link href="/projects" className={buttonStyles}>
-          View Projects →
-        </Link>
-      </section>
-
-      <div className="border-t border-line" />
-
       {latestPost && (
         <section
           className="rise-in flex flex-col gap-4 rounded-2xl bg-block p-8 text-block-foreground"
-          style={{ animationDelay: "0.3s" }}
+          style={{ animationDelay: "0.2s" }}
         >
           <div>
             <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
@@ -76,7 +52,7 @@ export default function Home() {
 
       <section
         className="rise-in flex flex-col gap-4 rounded-2xl bg-block p-8 text-block-foreground"
-        style={{ animationDelay: "0.4s" }}
+        style={{ animationDelay: "0.3s" }}
       >
         <div>
           <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
@@ -91,6 +67,30 @@ export default function Home() {
         </div>
         <Link href="/about" className={buttonStyles}>
           Read About →
+        </Link>
+      </section>
+
+      <div className="border-t border-line" />
+
+      <section
+        className="rise-in flex flex-col gap-4 rounded-2xl bg-block p-8 text-block-foreground"
+        style={{ animationDelay: "0.4s" }}
+      >
+        <div>
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
+            Playlists
+          </h2>
+          <p className="mt-3 font-display text-3xl tracking-tight text-block-foreground">
+            {playlists.length}{" "}
+            {playlists.length === 1 ? "playlist" : "playlists"} and counting
+          </p>
+          <p className="mt-2 max-w-md text-block-muted">
+            A running list of things I&apos;ve built, from training tools to
+            personal experiments.
+          </p>
+        </div>
+        <Link href="/playlists" className={buttonStyles}>
+          View Playlists →
         </Link>
       </section>
     </div>
