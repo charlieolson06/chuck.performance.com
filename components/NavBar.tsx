@@ -13,7 +13,7 @@ export function NavBar() {
       <nav className="flex flex-wrap items-center justify-between gap-y-3 px-6 py-6 sm:px-12 lg:px-20">
         <Link
           href="/"
-          className="font-display text-xl italic tracking-tight text-foreground sm:text-2xl"
+          className="font-mono text-sm font-medium uppercase tracking-widest text-foreground sm:text-base"
         >
           ChuckPerformance
         </Link>
