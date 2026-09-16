@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -21,6 +22,15 @@ export default function AboutPage() {
         and what you&apos;re interested in. This is a static page — edit this
         file directly whenever it needs to change.
       </p>
+
+      <Image
+        src="/photos/about-driveline.jpg"
+        alt="Athletes training on turf at a Driveline Baseball facility"
+        width={800}
+        height={1200}
+        className="rise-in mt-10 w-full max-w-sm rounded-2xl sm:max-w-md"
+        style={{ animationDelay: "0.2s" }}
+      />
     </article>
   );
 }
