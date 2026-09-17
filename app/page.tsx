@@ -17,6 +17,12 @@ export default function Home() {
           &ldquo;We must always reevaluate what we do, lest habits and past
           wisdom blind us to new possibilities.&rdquo;
         </p>
+        <p
+          className="rise-in mt-3 font-mono text-xs uppercase tracking-widest text-muted"
+          style={{ animationDelay: "0.1s" }}
+        >
+          — Mihaly Csikszentmihalyi
+        </p>
       </section>
 
       <div className="border-t border-line" />
