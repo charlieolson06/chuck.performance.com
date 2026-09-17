@@ -1,9 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { projects as playlists } from "@/lib/projects";
 
 const buttonStyles =
   "pill inline-flex w-fit items-center gap-2 border border-accent px-5 py-2 text-accent transition-colors hover:bg-accent hover:text-background";
+
+const GALLERY = [
+  "/photos/gallery/gallery-1.jpg",
+  "/photos/gallery/gallery-2.png",
+  "/photos/gallery/gallery-3.png",
+  "/photos/gallery/gallery-4.png",
+  "/photos/gallery/gallery-5.png",
+];
 
 export default function Home() {
   const latestPost = getAllPosts()[0];
@@ -24,6 +33,24 @@ export default function Home() {
           — Mihaly Csikszentmihalyi
         </p>
       </section>
+
+      <div
+        className="rise-in grid grid-cols-5 overflow-hidden rounded-2xl"
+        style={{ animationDelay: "0.1s" }}
+      >
+        {GALLERY.map((src, i) => (
+          <div key={src} className="relative h-40 sm:h-64 lg:h-80">
+            <Image
+              src={src}
+              alt={`Training photo ${i + 1}`}
+              fill
+              priority
+              sizes="20vw"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+        ))}
+      </div>
 
       <div className="border-t border-line" />
 
