@@ -19,35 +19,52 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-16">
-      <section>
-        <p className="rise-in font-display text-base italic leading-relaxed text-muted sm:text-lg">
-          &ldquo;We must always reevaluate what we do, lest habits and past
-          wisdom blind us to new possibilities.&rdquo;{" "}
-          <span className="font-mono text-xs not-italic uppercase tracking-wide">
-            — Mihaly Csikszentmihalyi
-          </span>
-        </p>
-      </section>
+      <div className="flex flex-col gap-6">
+        <section>
+          <p className="rise-in font-display text-base italic leading-relaxed text-muted sm:text-lg">
+            &ldquo;We must always reevaluate what we do, lest habits and past
+            wisdom blind us to new possibilities.&rdquo;{" "}
+            <span className="font-mono text-xs not-italic uppercase tracking-wide">
+              — Mihaly Csikszentmihalyi
+            </span>
+          </p>
+        </section>
 
-      <div
-        className="rise-in grid grid-cols-5 overflow-hidden rounded-2xl"
-        style={{ animationDelay: "0.1s" }}
-      >
-        {GALLERY.map((src, i) => (
-          <div key={src} className="relative h-64 sm:h-96 lg:h-[32rem]">
-            <Image
-              src={src}
-              alt={`Training photo ${i + 1}`}
-              fill
-              priority
-              sizes="20vw"
-              style={{
-                objectFit: "cover",
-                filter: "url(#photo-duotone) contrast(1.08)",
-              }}
-            />
-          </div>
-        ))}
+        <div
+          className="rise-in flex overflow-hidden rounded-2xl"
+          style={{ animationDelay: "0.1s" }}
+        >
+          {GALLERY.map((src, i) => (
+            <div
+              key={src}
+              className="relative h-64 flex-1 sm:h-96 lg:h-[32rem]"
+              style={
+                i === 0
+                  ? { zIndex: i }
+                  : {
+                      zIndex: i,
+                      marginLeft: "-48px",
+                      WebkitMaskImage:
+                        "linear-gradient(to right, transparent, black 48px)",
+                      maskImage:
+                        "linear-gradient(to right, transparent, black 48px)",
+                    }
+              }
+            >
+              <Image
+                src={src}
+                alt={`Training photo ${i + 1}`}
+                fill
+                priority
+                sizes="20vw"
+                style={{
+                  objectFit: "cover",
+                  filter: "url(#photo-duotone) contrast(1.08)",
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="border-t border-line" />

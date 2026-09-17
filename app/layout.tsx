@@ -49,7 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </filter>
         </svg>
         <NavBar />
-        <main className="w-full flex-1 px-6 py-16 sm:px-12 lg:px-20">
+        <main className="w-full flex-1 px-6 py-10 sm:px-12 lg:px-20">
           {children}
         </main>
         <Footer />
