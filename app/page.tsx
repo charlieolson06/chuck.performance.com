@@ -21,7 +21,7 @@ export default function Home() {
     <div className="flex flex-col gap-16">
       <div className="flex flex-col gap-6">
         <section>
-          <p className="rise-in font-display text-base italic leading-relaxed text-muted sm:text-lg">
+          <p className="rise-in font-display text-lg italic leading-relaxed text-muted sm:text-2xl">
             &ldquo;We must always reevaluate what we do, lest habits and past
             wisdom blind us to new possibilities.&rdquo;{" "}
             <span className="font-mono text-xs not-italic uppercase tracking-wide">
