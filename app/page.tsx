@@ -20,17 +20,12 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16">
       <section>
-        <p
-          className="rise-in max-w-lg font-display text-xl italic leading-relaxed text-muted"
-        >
+        <p className="rise-in font-display text-base italic leading-relaxed text-muted sm:text-lg">
           &ldquo;We must always reevaluate what we do, lest habits and past
-          wisdom blind us to new possibilities.&rdquo;
-        </p>
-        <p
-          className="rise-in mt-3 font-mono text-xs uppercase tracking-widest text-muted"
-          style={{ animationDelay: "0.1s" }}
-        >
-          — Mihaly Csikszentmihalyi
+          wisdom blind us to new possibilities.&rdquo;{" "}
+          <span className="font-mono text-xs not-italic uppercase tracking-wide">
+            — Mihaly Csikszentmihalyi
+          </span>
         </p>
       </section>
 
