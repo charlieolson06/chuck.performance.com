@@ -14,17 +14,6 @@ export default function AboutPage() {
 
       <div className="mt-10 border-t border-line" />
 
-      <svg width="0" height="0" aria-hidden className="absolute">
-        <filter id="photo-duotone" colorInterpolationFilters="sRGB">
-          <feColorMatrix type="saturate" values="0" />
-          <feComponentTransfer>
-            <feFuncR type="table" tableValues="0.1294 0.9490" />
-            <feFuncG type="table" tableValues="0.1137 0.9294" />
-            <feFuncB type="table" tableValues="0.0941 0.8941" />
-          </feComponentTransfer>
-        </filter>
-      </svg>
-
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch">
         <p
           className="rise-in font-display text-xl italic leading-relaxed text-muted"

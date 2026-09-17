@@ -39,14 +39,17 @@ export default function Home() {
         style={{ animationDelay: "0.1s" }}
       >
         {GALLERY.map((src, i) => (
-          <div key={src} className="relative h-40 sm:h-64 lg:h-80">
+          <div key={src} className="relative h-64 sm:h-96 lg:h-[32rem]">
             <Image
               src={src}
               alt={`Training photo ${i + 1}`}
               fill
               priority
               sizes="20vw"
-              style={{ objectFit: "cover" }}
+              style={{
+                objectFit: "cover",
+                filter: "url(#photo-duotone) contrast(1.08)",
+              }}
             />
           </div>
         ))}
