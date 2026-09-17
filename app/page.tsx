@@ -11,12 +11,8 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-16">
       <section>
-        <h1 className="rise-in font-display text-6xl leading-[1.05] tracking-tight text-foreground sm:text-7xl">
-          Chuck Olson
-        </h1>
         <p
-          className="rise-in mt-6 max-w-lg font-display text-xl italic leading-relaxed text-muted"
-          style={{ animationDelay: "0.1s" }}
+          className="rise-in max-w-lg font-display text-xl italic leading-relaxed text-muted"
         >
           &ldquo;We must always reevaluate what we do, lest habits and past
           wisdom blind us to new possibilities.&rdquo;
