@@ -57,11 +57,7 @@ export default function Home() {
                 fill
                 priority
                 sizes="20vw"
-                style={{
-                  objectFit: "cover",
-                  filter:
-                    "sepia(0.3) saturate(1.5) hue-rotate(-8deg) contrast(1.08) brightness(1.02)",
-                }}
+                style={{ objectFit: "cover" }}
               />
             </div>
           ))}
