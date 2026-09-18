@@ -15,13 +15,22 @@ export default function AboutPage() {
       <div className="mt-10 border-t border-line" />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch">
-        <p
-          className="rise-in font-display text-xl italic leading-relaxed text-muted"
-        >
-          Write a couple of paragraphs here: background, what you work on
-          now, and what you&apos;re interested in. This is a static page —
-          edit this file directly whenever it needs to change.
-        </p>
+        <div className="flex flex-col gap-6">
+          <p className="rise-in font-display text-xl italic leading-relaxed text-muted">
+            On a mission to prove that the best program isn’t the most
+            ‘optimal’ for each individual athlete, but a program that gets
+            them to train their ass off, rising to a new floor, through
+            meticulous planned creative designs and engaging training
+            environments.
+          </p>
+          <p
+            className="rise-in font-mono text-xs uppercase tracking-widest text-muted"
+            style={{ animationDelay: "0.05s" }}
+          >
+            Currently a high performance trainer at{" "}
+            <span className="text-accent">Driveline Baseball</span>
+          </p>
+        </div>
 
         <div
           className="rise-in relative min-h-[420px] overflow-hidden rounded-2xl lg:min-h-[640px]"
