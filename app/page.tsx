@@ -59,7 +59,8 @@ export default function Home() {
                 sizes="20vw"
                 style={{
                   objectFit: "cover",
-                  filter: "url(#photo-duotone) contrast(1.08)",
+                  filter:
+                    "sepia(0.3) saturate(1.5) hue-rotate(-8deg) contrast(1.08) brightness(1.02)",
                 }}
               />
             </div>

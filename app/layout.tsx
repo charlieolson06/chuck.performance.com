@@ -38,16 +38,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <svg width="0" height="0" aria-hidden className="absolute">
-          <filter id="photo-duotone" colorInterpolationFilters="sRGB">
-            <feColorMatrix type="saturate" values="0" />
-            <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.1294 0.9490" />
-              <feFuncG type="table" tableValues="0.1137 0.9294" />
-              <feFuncB type="table" tableValues="0.0941 0.8941" />
-            </feComponentTransfer>
-          </filter>
-        </svg>
         <NavBar />
         <main className="w-full flex-1 px-6 py-10 sm:px-12 lg:px-20">
           {children}
