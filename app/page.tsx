@@ -43,11 +43,11 @@ export default function Home() {
                   ? { zIndex: i }
                   : {
                       zIndex: i,
-                      marginLeft: "-48px",
+                      marginLeft: "-20px",
                       WebkitMaskImage:
-                        "linear-gradient(to right, transparent, black 48px)",
+                        "linear-gradient(to right, transparent, black 20px)",
                       maskImage:
-                        "linear-gradient(to right, transparent, black 48px)",
+                        "linear-gradient(to right, transparent, black 20px)",
                     }
               }
             >
