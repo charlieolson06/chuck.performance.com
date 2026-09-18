@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="mt-10 border-t border-line" />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-stretch">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col justify-center gap-6">
           <p className="rise-in font-display text-xl italic leading-relaxed text-muted">
             On a mission to prove that the best program isn’t the most
             ‘optimal’ for each individual athlete, but a program that gets
