@@ -97,28 +97,6 @@ export default function Home() {
       >
         <div>
           <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
-            About
-          </h2>
-          <p className="mt-3 font-display text-3xl tracking-tight text-block-foreground">
-            Performance, curiosity, and the work in between
-          </p>
-          <p className="mt-2 max-w-md text-block-muted">
-            Background, what I work on now, and what I&apos;m interested in.
-          </p>
-        </div>
-        <Link href="/about" className={buttonStyles}>
-          Read About →
-        </Link>
-      </section>
-
-      <div className="border-t border-line" />
-
-      <section
-        className="rise-in flex flex-col gap-4 rounded-2xl bg-block p-8 text-block-foreground"
-        style={{ animationDelay: "0.4s" }}
-      >
-        <div>
-          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-block-muted">
             Playlists
           </h2>
           <p className="mt-3 font-display text-3xl tracking-tight text-block-foreground">
